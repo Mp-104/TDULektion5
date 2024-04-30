@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello World Page</title>
+</head>
+<body>
+<h1>Products</h1>
+<ul>
+    <li th:each="product : ${products.entrySet()}">
+        ID: <span th:text="${product.key}"></span>
+        Name: <span th:text="${product.value.name}"></span>
+        Price: <span th:text="${product.value.price}"></span>
+    </li>
+</ul>
+</body>
+</html>
