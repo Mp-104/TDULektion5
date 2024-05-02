@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
-@Controller //RestController
+@Controller
+//@RestController
 @SpringBootApplication
 public class ProductController {
 
@@ -40,7 +41,7 @@ public class ProductController {
     }
 
     @GetMapping("/myendpoint")
-    public String myEndPoint (@RequestParam(value = "name") String name) {
+    public String myEndPoint (@RequestParam(value = "name", defaultValue = "world") String name) {
 
         return "Hello " + name;
     }
